@@ -1,0 +1,12 @@
+body    {
+	background-size: cover;
+	margin: 0;
+    padding: 0;
+	color: 37ce2c;
+    background-color: black;
+}
+#banner    {
+	margin-left: auto;
+    margin-right: auto;
+    padding-top: -30px;
+}

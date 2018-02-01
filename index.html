@@ -1,37 +1,100 @@
+<!DOCTYPE html>
 <html>
     <head>
 	    <title>pxl</title>
 		<!-- Created on 31/01/2018 -->
+		<script language="Javascript" type="text/javascript" src="JS/random.js"></script>
+		<script language="Javascript" type="text/javascript" src="JS/mute.js"></script>
+		<script language="Javascript" type="text/javascript" src="JS/play.js"></script>
 	<center>
 		<a href="http://steamcommunity.com/groups/team_pxl">
 			<img id="banner" src="images/banner.png" border=0 width=99.99%>
 		</a>
-	</head>
-	
-	<style>
-	body    {
-	    background-image: url("images/shinoa.gif");
-		background-size: cover;
-		margin: 0;
-        padding: 0;
-		color: 37ce2c;
-		background-color: black;
-	}
-	#banner    {
-	    margin-left: auto;
-        margin-right: auto;
-        padding-top: -30px;
-    }
-	</style>
-	
-	<body>
-	    <audio loop autoplay>
-			<source src="audio/pxlwins.mp3" type="audio/mp3">
-		</audio>
+		<button type="button" class="button" onclick="choosePic();" value=>pxl_</button>
+		<button type="button" class="button" onclick="window.location.href='http://steamcommunity.com/groups/team_pxl'" value=>crew_</button>
+		<button type="button" class="button" onclick="alert('I enjoy watching you')" value=>help_</button>
+		<button type="button" class="button" onclick="window.location.href='<!--insert matrix here-->'" value=>enter_</button>
+		<button type="button" class="button" onclick="window.location.href='https://terrabot.itch.io/stronk-the-barbarian'" value=>stronk_</button>
+		<button type="button" class="button" onclick="audioMute();" value=>mute_</button>
+		<button type="button" class="button" onclick="audioPlay();" value=>unmute_</button>
+		<button type="button" class="button" onclick="window.location.href='http://steamcommunity.com/id/terrabotz'" value=>root_</button>
+		<button type="button" class="button" onclick="window.location.href='https://www.youtube.com/channel/UCZ-FxJ3iQFONhUI8F5tL5AQ'" value=>fun_</button>
+		<img id="myPicture" alt="some image" src="images/shinoa.gif" border=0 width=1000>
+	</center>
+        <style>
+	        body    {
+			    background-image: url('images/matrix.gif');
+	            background-color: black;
+	            background-size: cover;
+	            margin: 0;
+                padding: 0;
+	            color: #37ce2c;
+		        font-family: arial;
+            }
+            #banner    {
+	            margin-left: auto;
+                margin-right: auto;
+                padding-top: -30px;
+            }
+            button    {
+                background-color: #37ce2c;
+                border: green;
+                color: black;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+	        	border-radius: 12px
+            }
+	        image	    {
+	            margin-left: auto;
+                margin-right: auto;
+                padding-top: -35px;
+	        }
+        </style>
+    </head>
+	    <body>
 		<center>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<p style="background-color: #000000"><b>May thy have mercy on the lost</b></p>
+		  <div id="quote"></div>
+              <script>
+                  (function() {
+                  var quotes = [
+                  {
+                      text: "Stop acting tough, You're a Devil abandoned by your parents.",
+                      img:  "images/blank.png",
+                  },
+                  {
+                      text: "For the first time in my life someone told me they needed me!",
+                      img:  "images/blank.png",
+                  },
+				                    {
+                      text: "かわいい悪魔キラー.",
+                      img:  "images/blank.png",
+                  },
+                  {
+                      text: "Mistu is nearly as cute as me!",
+                      img:  "images/blank.png",
+                  },
+				                    {
+                      text: "Family takes care of family.",
+                      img:  "images/blank.png",
+                  },
+                  {
+                      text: "4 feet and 11 inches is tall for my age!",
+                      img:  "images/blank.png",
+                  }
+                  ];
+                      var quote = quotes[Math.floor(Math.random() * quotes.length)];
+                      document.getElementById("quote").innerHTML =
+                      '<p style="background-color: #000000">' + quote.text + '</p>' +
+                      '<img src="' + quote.img + '">';
+                  })();
+                </script>
 		</center>
+	        <audio id="myAudio" src="audio/pxlwins.mp3" type="audio/mp3" autoplay loop>
+	    	</audio>
 	</body>
-	
 </html>
