@@ -1,5 +1,5 @@
 
-var myPix = new Array("images/shinoa.gif","images/shinoa2.gif","images/shinoa3.gif","images/shinoa4.gif","images/shinoa5.gif","images/shinoa6.gif","images/shinoa7.gif","images/shinoa8.gif");
+var myPix = new Array("shinoa.gif","shinoa2.gif","shinoa3.gif","shinoa4.gif","shinoa5.gif","shinoa6.gif","shinoa7.gif","shinoa8.gif");
 
 function choosePic() {
 	randomNum = Math.floor((Math.random() * myPix.length));
