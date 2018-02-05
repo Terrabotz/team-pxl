@@ -1,46 +1,118 @@
+
+<!-- Created on 31/01/2018 -->
+<!-- Inspired by vxd, str1kez and cow. -->
+
 <!DOCTYPE html>
 <html>
     <head>
 	    <title>pxl</title>
-		<!-- Created on 31/01/2018 -->
-		<script language="Javascript" type="text/javascript" src="random.js"></script>
-		<script language="Javascript" type="text/javascript" src="mute.js"></script>
-		<script language="Javascript" type="text/javascript" src="play.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="images/shinoaicon.gif">
+		
+		<!-- Action Java scripts (all safe) -->
+		
+		<script language="Javascript" type="text/javascript" src="JS/random.js"></script>
+		<script language="Javascript" type="text/javascript" src="JS/mute.js"></script>
+		<script language="Javascript" type="text/javascript" src="JS/play.js"></script>
+		<script language="Javascript" type="text/javascript" src="JS/preload.js"></script>
+				
+		<!-- Disables F12 ctrl+u Right Click ETC. (all safe) -->
+		
+		<script language="JavaScript">
+
+		$(document).on("contextmenu",function(e){        
+		 e.preventDefault();
+		});
+
+		$(document).keydown(function(event){
+		  if(event.keyCode==123){
+		  return false;
+		 }
+		else if(event.ctrlKey && event.shiftKey && event.keyCode==73){        
+		    return false;
+		 }
+		});
+
+		document.onkeydown = function(e) { 
+		if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {//Alt+c, Alt+v will also be disabled sadly. 
+		} 
+		return false; 
+		}; 
+
+		function click() { 
+		if (event.button==2||event.button==3) { 
+		oncontextmenu='return false'; 
+		} 
+		} 
+		document.onmousedown=click 
+		document.oncontextmenu = new Function("return false;") 
+		</script> 
+
+		
+		
 	<center>
+	
+	    <!-- Top Banner (all safe) -->
+		
 		<a href="http://steamcommunity.com/groups/team_pxl">
-			<img id="banner" src="banner.png" border=0 width=99.99%>
+			<img id="banner" src="images/banner.png" border=0 width=99.99%>
 		</a>
-		<button type="button" class="button" onclick="choosePic();" value=>pxl_</button>
-		<button type="button" class="button" onclick="window.location.href='http://steamcommunity.com/groups/team_pxl'" value=>crew_</button>
-		<button type="button" class="button" onclick="alert('I enjoy watching you')" value=>help_</button>
-		<button type="button" class="button" onclick="window.location.href='<!--insert matrix here-->'" value=>enter_</button>
-		<button type="button" class="button" onclick="window.location.href='https://terrabot.itch.io/stronk-the-barbarian'" value=>stronk_</button>
-		<button type="button" class="button" onclick="audioMute();" value=>mute_</button>
-		<button type="button" class="button" onclick="audioPlay();" value=>unmute_</button>
-		<button type="button" class="button" onclick="window.location.href='http://steamcommunity.com/id/terrabotz'" value=>root_</button>
-		<button type="button" class="button" onclick="window.location.href='https://www.youtube.com/channel/UCZ-FxJ3iQFONhUI8F5tL5AQ'" value=>fun_</button>
-		<img id="myPicture" alt="some image" src="shinoa.gif" border=0 width=1000>
+			
+		<!-- Action Menu Buttons (all safe) -->
+		
+		<button type="button" class="button" onclick="choosePic();" value=><b>pxl_</b></button>
+		<button type="button" class="button" onclick="window.location.href='http://steamcommunity.com/groups/team_pxl'" value=><b>gang_</b></button>
+		<button type="button" class="button" onclick="alert('I enjoy watching you')" value=><b>target_</b></button>
+		<button type="button" class="button" onclick="window.location.href='https://drv.tw/~redstoneking4464@gmail.com/gd/Project%20Pxl/matrix.html'" value=><b>enter_</b></button>
+		<button type="button" class="button" onclick="window.location.href='https://terrabot.itch.io/stronk-the-barbarian'" value=><b>game_</b></button>
+		<button type="button" class="button" onclick="audioMute();" value=><b>mute_</b></button>
+		<button type="button" class="button" onclick="audioPlay();" value=><b>unmmute_</b></button>
+		<button type="button" class="button" onclick="window.location.href='http://steamcommunity.com/id/terrabotz'" value=><b>root_</b></button>
+		<button type="button" class="button" onclick="window.location.href='https://www.youtube.com/channel/UCZ-FxJ3iQFONhUI8F5tL5AQ'" value=><b>fun_</b></button>
+		
+		<!-- Middle Shinoa .gif (all safe) -->
+		
+		<img id="myPicture" alt="some image" src="images/shinoa.gif" border=2 width=1000>
+		
 	</center>
+	
+	    <!-- Style Sheets, because for some reason html5 hates me and doesn't let me use external ones (all safe) -->
+		
         <style>
+		
 	        body    {
-			    background-image: url('matrix.gif');
+			    cursor:url("http://cur.cursors-4u.net/cursors/cur-11/cur1054.cur"),auto;
+			    background-image: url('images/matrix.gif');
 	            background-color: black;
-	            background-size: cover;
 	            margin: 0;
                 padding: 0;
 	            color: #37ce2c;
-		        font-family: arial;
+		        font-family: Courier New;
             }
+			
+			h4    {
+			    font-size: 10px;
+				text-align: center;
+			}
+			
+			footer    {
+			    cursor:url("http://cur.cursors-4u.net/cursors/cur-11/cur1054.cur"),auto;
+				margin-left: auto;
+				margin-right auto;
+				
+			}
+			
             #banner    {
 	            margin-left: auto;
                 margin-right: auto;
                 padding-top: -30px;
             }
+			
             button    {
+			    font-family: Courier New;
                 background-color: #37ce2c;
                 border: green;
                 color: black;
-                padding: 15px 32px;
+                padding: 10px 28px;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
@@ -49,42 +121,53 @@
                 cursor: pointer;
 	        	border-radius: 12px
             }
+			
 	        image	    {
 	            margin-left: auto;
                 margin-right: auto;
                 padding-top: -35px;
 	        }
+			
         </style>
     </head>
 	    <body>
+		
+		<!-- Randomized Quote Text (all safe) -->
+		
 		<center>
 		  <div id="quote"></div>
               <script>
+			  
                   (function() {
                   var quotes = [
                   {
                       text: "Stop acting tough, You're a Devil abandoned by your parents.",
-                      img:  "blank.png",
+                      img:  "images/blank.png",
                   },
+				  
                   {
                       text: "For the first time in my life someone told me they needed me!",
-                      img:  "blank.png",
+                      img:  "images/blank.png",
                   },
+				  
 				                    {
-                      text: "かわいい悪魔キラー.",
-                      img:  "blank.png",
+                      text: "...",
+                      img:  "images/blank.png",
                   },
+				  
                   {
                       text: "Mistu is nearly as cute as me!",
-                      img:  "blank.png",
+                      img:  "images/blank.png",
                   },
+				  
 				                    {
                       text: "Family takes care of family.",
-                      img:  "blank.png",
+                      img:  "images/blank.png",
                   },
+				  
                   {
                       text: "4 feet and 11 inches is tall for my age!",
-                      img:  "blank.png",
+                      img:  "images/blank.png",
                   }
                   ];
                       var quote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -92,9 +175,20 @@
                       '<p style="background-color: #000000">' + quote.text + '</p>' +
                       '<img src="' + quote.img + '">';
                   })();
+				  
                 </script>
-		</center>
-	        <audio id="myAudio" src="pxlwins.mp3" type="audio/mp3" autoplay loop>
-	    	</audio>
+				<br><br><br><br>
+			</center>
+		
+		<!-- Background Audio (all safe) -->
+		
+		<audio id="myAudio" src="audio/pxlwins.mp3" type="audio/mp3" autoplay loop> </audio>
+		
 	</body>
+	<footer>
+	<h4> Programmed by Terrabot </h4>
+	</footer>
 </html>
+
+<!-- Programmed by Terrabot "rawrxd" -->
+<!-- Shinoa is a waifu -->
